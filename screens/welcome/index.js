@@ -3,13 +3,16 @@ import { View, Image, Text, ScrollView, SafeAreaView, StyleSheet } from "react-n
 
 const WelcomeScreen = () => {
   return <SafeAreaView style={styles.container}>
-      <ScrollView contentContainerStyle={styles.scrollView}>
-        <View style={styles.group} />
-        <View style={styles.group}>
+      <ScrollView contentContainerStyle={{
+      flexDirection: "row",
+      flex: 1
+    }}>
+        <View style={styles.MdveuZKP}><View style={styles.group} /></View>
+        <View style={styles.idTUCmyI}><View style={styles.group}>
           <Image style={styles.logo} source={require("./flare-x.png")} resizeMode="center" />
           <Text style={styles.text}>{"Real AI. Real Empowerment."}</Text>
-        </View>
-        <Text style={styles.footer}>{"AI Supercharges Data Exploration"}</Text>
+        </View></View>
+        <View style={styles.dcTJeeXs}></View>
       </ScrollView>
     </SafeAreaView>;
 };
@@ -18,12 +21,6 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: "#F8F8FC",
     height: "100%"
-  },
-  scrollView: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "space-between",
-    padding: 20
   },
   group: {
     alignItems: "center"
@@ -41,12 +38,14 @@ const styles = StyleSheet.create({
     color: "#828AB0",
     fontWeight: 700
   },
-  footer: {
-    textAlign: "center",
-    fontSize: 18,
-    color: "#828AB0",
-    fontWeight: 700,
-    marginBottom: 20
+  idTUCmyI: {
+    flex: 1
+  },
+  MdveuZKP: {
+    flex: 1
+  },
+  dcTJeeXs: {
+    flex: 1
   }
 });
 export default WelcomeScreen;
